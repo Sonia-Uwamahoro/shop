@@ -1,0 +1,426 @@
+/* ------------------ Google fonts --------------- */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Dosis:wght@200;300&family=Jost:wght@200;300&family=Montserrat:wght@100;200;300;400&family=Quicksand:wght@300;400&family=Ysabeau:wght@1;100;200;300;400;500;600&display=swap');
+/* ----------------------------------- GENERAL STYLING ---------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+}
+  
+
+/* ----------------------------------- NAVIGATION BAR ---------------------------------- */
+  .nav {
+    padding: 1.3em 0 1.3em 0;
+    background-color: #ffffff;
+    position: relative;
+    text-align: center;
+    font-family: 'Ysabeau', sans-serif;
+  } 
+
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    font-size: 1em;
+  }
+
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #777777;
+    font-weight: 800;
+  }
+
+  .nav > .nav-links > a:hover{
+    color: #f28caf;
+  }
+
+  .nav > .nav-links > .active {
+    color: #000000;
+    font-weight: bolder;
+  }
+  .nav > #nav-check {
+    display: none;
+  }
+
+   @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 7px;
+      border-top: 2px solid #f28caf;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #ffffff;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+  /* ----------------------------------- NAVIGATION BAR END ------------------------------- */
+
+
+  /* ----------------------------------- FRONT PAGE ---------------------------------- */
+  #front-page{
+    background-image: linear-gradient(rgba(86, 70, 97, 0.178),rgba(74, 60, 83, 0.356)),url('../images/one.png');
+    width: 100%;
+    background-size:cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding: 11.6% 0 11.6% 0;
+  }
+
+  .front-page{
+    padding-left: 4em;
+    color: #ffffff;
+    font-size: 2em;
+    font-family: 'Ysabeau', sans-serif;
+  }
+
+  .front-page button{
+    background-color: #f28caf;
+    border: 2px solid #f28caf;
+    padding: 1em 5em 1em 5em;
+    font-size: .4em;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 2;
+  }
+  .front-page button:hover{
+    background-color: transparent;
+    border: 2px solid #f28caf;
+
+  }
+/* ----------------------------------- FRONT PAGE END------------------------------- */
+
+
+/* ----------------------------------- SELECTION ----------------------------------- */
+#selection{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-family: 'Ysabeau', sans-serif;
+}
+#selection p{
+    text-align: center;
+    font-family: 'Ysabeau', sans-serif;
+    font-weight: bold;
+    color: #777777;
+    font-size: 1.1em;
+    padding-bottom: .5em;
+}
+
+.selection-text{
+    text-align: center;
+}
+
+.selection-text h3{
+    display: inline;
+    padding: 0 .8em 0 .8em;
+    font-size: 1.8em;
+    font-family: 'Ysabeau', sans-serif;
+    color: #555555;
+}
+
+.selection-text h3:hover{
+    color: #f28caf;
+}
+
+.selection-text .h3-two{
+    text-decoration: underline !important;
+}
+
+.selection{
+    margin-top: 5.5em;
+    padding: 0 2em 0 2em;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+
+.selection img{
+    width: 80%;
+}
+
+.s-div1 h5{
+    padding-top: 1.4em;
+    font-size: 1em;
+    color: #777777;
+}
+
+.s-div1 h5:hover{
+    color: #f28caf;
+}
+
+.s-div1 h6{
+    padding-bottom: 1em;
+    font-size: 1.6em;
+    color: #777777;
+    margin-top: -.5em;
+    font-weight: 300;
+}
+
+.s-button{
+    text-align: center ;
+}
+
+.s-button button{
+    text-align: center;
+    background-color: #f28caf;
+    border: 2px solid #f28caf;
+    padding: 1.3em 4em 1.3em 4em;
+    font-size: .9em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.s-button button:hover{
+    background-color: transparent;
+    border: 2px solid #f28caf;
+    color: #f28caf;
+}
+
+/* ----------------------------------- SELECTION END ------------------------------- */
+
+
+/* ------------------------------------ SHOW NOW ---------------------------------- */
+.show{
+    font-family: 'Ysabeau', sans-serif;
+    display: grid;
+    padding: 2em;
+    grid-template-columns: repeat(2,1fr);
+    color: #ffffff;
+}
+
+/* show-div1 */
+.show-div1{
+    background-image: linear-gradient(rgba(86, 70, 97, 0.178),rgba(74, 60, 83, 0.356)),url('../images/six.jpg');
+    background-size:cover;
+    padding-top: 80%;
+    padding-left: 2em;
+    margin: .5em;
+}
+
+/* show-div2 */
+.s-div2{
+    background-image: linear-gradient(rgba(86, 70, 97, 0.178),rgba(74, 60, 83, 0.356)),url('../images/seven.jpg');
+    background-size:cover;
+    padding-top: 30%;
+    margin-bottom: .5em;
+    padding-left: .5em;
+}
+
+/* show-div2 */
+.s-div3{
+    background-image: linear-gradient(rgba(86, 70, 97, 0.178),rgba(74, 60, 83, 0.356)),url('../images/eight.png');
+    background-size:cover;
+    padding-top: 30%;
+    padding-left: 2em;
+}
+
+
+.show p{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.show h2{
+    font-size: 2em;
+    margin-top: -.3em;
+    padding-bottom: .5em;
+    font-weight: bold;
+}
+
+.show button{
+    text-align: center;
+    background-color: #f28caf;
+    border: 2px solid #f28caf;
+    padding: 1em 2em 1em 2em;
+    font-size: 1em;
+    color: #ffffff;
+    font-family: 'Ysabeau', sans-serif;
+}
+
+.show button:hover{
+    background-color: transparent;
+    border: 2px solid #f28caf;
+    color: #f28caf;
+}
+/* ----------------------------------- SHOW NOW END ------------------------------- */
+
+
+/* ----------------------------------- WELCOME ----------------------------------- */
+.welcome{
+    padding-top: 6em;
+    text-align: center;
+    font-family: 'Ysabeau', sans-serif;
+}
+
+.welcome p{
+    font-weight: bold;
+    padding-bottom: .5em;
+    font-size: 1.1em;
+}
+
+.welcome h1{
+    font-weight: bold;
+    font-size: 3em;
+    margin-top: .4em;
+}
+
+.welcome h4{
+    color: #777777;
+    font-weight: bold;
+    font-size: 1.4em;
+    padding-bottom: 2em;
+    margin-top: -1em;
+    line-height: 1.5;
+}
+
+/* ----------------------------------- WELCOME END ------------------------------- */
+
+
+/* ------------------------------------ VIDEO- ----------------------------------- */
+.video{
+    background-image: url('../images/tenn.png');
+    width: 100%;
+    background-size:cover;
+    padding: 11.6% 0 11.6% 0;
+}
+
+.video{
+    padding-top: 30%;
+}
+
+/* ----------------------------------- VIDEO END --------------------------------- */
+
+
+/* ----------------------------------- FOOTER -----------------------------^------ */
+.footer {
+    background-color: #ffffff;
+    padding: 10% 1% 8% 3%;
+    color: #999999;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: 'Ysabeau', sans-serif;
+}
+
+.footer h4{
+  font-weight: bolder;
+  color: #333333;
+  font-size: 1em;
+  padding-bottom: .6em;
+}
+
+.footer p{
+  /* text-align: inherit; */
+  font-weight: bold;
+  font-size: .95em;
+  line-height: 2.5;
+  padding-bottom: 1em;
+}
+
+.footer-div-2 p:hover{
+  color: #f28caf;
+}
+
+.footer-div-3 p:hover{
+  color: #f28caf;
+}
+
+.footer-div-icons{
+  padding-top: 1em;
+  margin-left: -1.7em;
+}
+
+.footer-div-icons i{
+  font-size: 1.4em;
+  padding-left: 1em;
+  color: #777777;
+}
+
+.footer-div-icons i:hover{
+  color: #f28caf;
+}
+
+
+.footer-div-2{
+  margin-left: 10em;
+}
+.footer-div-2 p{
+  margin-bottom: -2.2em;
+}
+
+
+.footer-div-3{
+  margin-left: 5em;
+}
+.footer-div-3 p{
+  margin-bottom: -2.2em;
+}
+
+.footer-div-4 input{
+  padding: 1em 3.2em 1em 3.2em;
+  border: 2px solid #c7c7c7;
+  margin-bottom: 2em;
+}
+
+.footer-div-4 ::placeholder{
+  color: #c7c7c7;
+}
+
+.footer-div-4 button{
+  background-color: #f28caf;
+  border: 2px solid #f28caf;
+  padding: 1em 3em 1em 3em;
+  font-size: .9em;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bolder;
+  font-family: 'Ysabeau', sans-serif;
+  margin-bottom: 1em;
+}
+
+.footer-div-4 button:hover{
+  background-color: transparent;
+  border: 2px solid #f28caf;
+  color: #f28caf;
+}
+
+.footer-div-icons img{
+  width: 2.7em;
+  padding: .5em;
+}
+
+/* ----------------------------------- FOOTER END --------------------------------- */
+/* END */
